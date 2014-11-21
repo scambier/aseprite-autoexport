@@ -19,7 +19,6 @@ def main():
                     newFile.export()
                     AseFile.files.remove(file)
                     AseFile.files.append(newFile)
-                    pass
             else:
                 # Create an instance and save it
                 file = AseFile(filename)
