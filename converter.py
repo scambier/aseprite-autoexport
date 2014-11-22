@@ -16,11 +16,11 @@ def main():
 
             if file:
                 # check if md5 changed between passes
-                newFile = AseFile(filename)
-                if (newFile.hash != file.hash):
-                    newFile.export()
+                new_file = AseFile(filename)
+                if new_file.hash != file.hash:
+                    new_file.export()
                     AseFile.files.remove(file)
-                    AseFile.files.append(newFile)
+                    AseFile.files.append(new_file)
             else:
                 # Create an instance and save it
                 file = AseFile(filename)
