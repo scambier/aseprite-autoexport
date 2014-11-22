@@ -48,7 +48,7 @@ class AseFile:
         for file in cls.files:
             if file.name == filename:
                 return file
-            return false
+        return False
 
 if __name__ == "__main__":
     main()
