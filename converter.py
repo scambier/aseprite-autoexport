@@ -4,6 +4,8 @@ from time import sleep
 import hashlib
 from subprocess import call
 
+path_to_ase = "path\\to\\aseprite.exe"
+
 
 def main():
     while True:
@@ -41,7 +43,7 @@ class AseFile:
         return hashlib.md5(open(fullpath, 'rb').read()).hexdigest()
 
     def export(self):
-        call(["path\\to\\aseprite.exe", "--batch", self.name, "--sheet", self.png_name])
+        call([path_to_ase, "--batch", self.name, "--sheet", self.png_name])
 
     @classmethod
     def find_file(cls, filename):
@@ -49,6 +51,7 @@ class AseFile:
             if file.name == filename:
                 return file
         return False
+
 
 if __name__ == "__main__":
     main()
